@@ -66,7 +66,7 @@ object[0].value = "example@example.com";
 const getData = object.map(data => `"${data.key}": "${data.value}"`);
 
 //4. Assign the new data to an object.
-const newData = Object.assign({}, getData)
+const newData = JSON.stringify(Object.assign({}, getData));
 console.log(newData)
 ```
 

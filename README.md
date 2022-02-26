@@ -4,10 +4,10 @@
 
 The process of this code test was to take in some JSON and convert it to
 Javascript and then, manipulate the data to so that the required fields were
-shown. Oraganised by the Key and Value pairs. I started off googling for JSON
-methods and was reminded of `JSON.parse`
+shown. Organised by the Key and Value pairs. I started off googling for JSON
+methods and was reminded of `JSON.parse`=. 
 
-Specifically to go From This:
+The request was specifically to go From This:
 
 ```
 {
@@ -38,6 +38,38 @@ To This:
         }
 
 ```
+I've included a snipped of my solution below: 
+```
+const data = `{
+    "attributes": [
+        {
+            "key": "email",
+            "value": "jamesd@example.com"
+        },
+        {
+            "key": "name",
+            "value": "James Dean"
+        },
+        {
+            "key": "shoesize",
+            "value": 10
+        }
+    ]
+}`
+
+//1. Parse the JSON into a Javascript Object
+let object = JSON.parse(data).attributes;
+
+//2. assign the new email to the value of the object
+object[0].value = "example@example.com";
+//3. Map over the data to create an array with the Key and Value
+const getData = object.map(data => `"${data.key}": "${data.value}"`);
+
+//4. Assign the new data to an object.
+const newData = Object.assign({}, getData)
+console.log(newData)
+```
+
 
 I knew that I'd need to start by parseing the JSON data into JavaScript using
 `JSON.parse` so that it could return a javascript object. I knew I was going to

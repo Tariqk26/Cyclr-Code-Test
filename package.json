@@ -1,0 +1,24 @@
+{
+  "name": "cyclr-codetest",
+  "version": "1.0.0",
+  "description": "The process of this code test was to take in some JSON and convert it to\r Javascript and then, manipulate the data to so that the required fields were\r shown. Organised by the Key and Value pairs. I started off googling for JSON\r methods and was reminded of `JSON.parse`=.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest", 
+    "test:watch": "jest --watch" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tariqk26/Cyclr-Code-Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tariqk26/Cyclr-Code-Test/issues"
+  },
+  "homepage": "https://github.com/Tariqk26/Cyclr-Code-Test#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
